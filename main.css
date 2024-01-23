@@ -1,0 +1,314 @@
+/*
+2021-2162
+Javier Peña Perez
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@200;300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
+
+
+*,*::before,*::after{
+    box-sizing: border-box;
+}
+
+html{
+    box-sizing: border-box;
+    font-family: 'Silkscreen', cursive;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    min-height: 100vh;
+    position: relative;
+    background-color: hsl(0, 0%, 18%);
+}
+
+h1,h2,h3,h4,h5,h6,p{
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+.case{
+    position: absolute;
+    inset: 1.5rem 2.5rem;
+    border-radius: 2ex;
+    background-image: linear-gradient(hsl(214 8% 19%) 0%, hsl(200 7% 14%) 100%);
+    box-shadow: 0 0 1.5rem .2rem hsl(214 8% 05%);
+    isolation: isolate;
+
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+}
+
+
+.display_container{
+    padding: 1.5rem 2.5rem 0;
+    position: relative;
+}
+
+.display{
+    min-height: 100%;
+    border-radius: 1ex;
+    background-color: hsl(0, 0%, 7%);
+    position: relative;
+    box-shadow: inset 0 0 .15rem .12rem hsla(0, 0%, 100%, 0.1);
+
+    display: grid;
+    grid-template-rows: 1fr 4fr;
+    color: hsl(202, 54%, 53%);
+    text-shadow: 0 0 1rem hsla(202, 54%, 53%, 0.199);
+}
+
+.display > header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 .12rem .15rem hsla(0, 0%, 100%, 0.048);
+    padding: 0 2.4rem;
+    position: relative;
+}
+
+.display > header h2{
+    font-weight: 500;
+    position: relative;
+    z-index: 1000;
+}
+
+.display::before{
+    content: '';
+    display: block;
+    position: absolute;
+    inset: -.7rem;
+    border-radius: 2ex;
+    background-image: linear-gradient(hsl(214 8% 10%) 0%, hsl(200 7% 11%));
+    z-index: -1;
+    border-bottom: 1px solid hsla(0, 0%, 100%, 0.14);
+}
+
+.display::after{
+    content: '';
+    display: block;
+    position: absolute;
+    inset: 0;
+    border-radius: 1ex;
+    background-color: hsla(0, 0%, 100%, 0.018);
+    clip-path: polygon(0 0, 66% 0, 54% 100%, 0 100%);
+}
+
+.display > form{
+    position: relative;
+    z-index: 1000;
+}
+
+
+.entry{
+    padding-top: 2.1rem;
+    padding-left: 2.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 4fr 1fr;
+}
+
+.entry label{
+    font-size: 1rem;
+    padding-right: .5rem;
+}
+
+.entry input{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid hsl(202, 54%, 53%);
+    padding-bottom: .5rem;
+    font-size: 1rem;
+    color: hsla(0, 0%, 100%, 0.438);
+}
+
+.entry .col{
+    display: grid;
+    gap: 1rem;
+}
+
+.entry button{
+    margin-top: .8rem;
+    grid-column: 1/3;
+    aspect-ratio: 16/9;
+    width: 4rem;
+    justify-self: center;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: hsl(202, 54%, 53%);
+    position: relative;
+}
+
+.entry button::after{
+    content: '';
+    display: block;
+    position: absolute;
+    inset: 0;
+    border-radius: 1ex;
+    background-color: hsla(0, 0%, 100%, 0.11);
+    clip-path: polygon(0 0, 66% 0, 54% 100%, 0 100%);
+}
+
+.radio_header{
+    padding-bottom: 1rem;
+}
+
+
+
+
+.buttons{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    position: relative;
+}
+
+.buttons .col{
+    padding: 3.8rem 4rem 2.5rem;
+}
+
+.buttons .col .button{
+    height: 100%;
+    font-size: 1.1rem;
+    border-radius: 1ex;
+    background-color: hsl(0, 0%, 7%);
+    position: relative;
+    display: grid;
+    place-items: center;
+    color: hsla(0, 0%, 100%, 0.438);
+    box-shadow: inset 0 0 .15rem .12rem hsla(0, 0%, 100%, 0.1);
+}
+
+.buttons .col .button span{
+    position: relative;
+    z-index: 1000;
+}
+
+.buttons .col .button::before{
+    content: '';
+    display: block;
+    position: absolute;
+    inset: -.7rem;
+    border-radius: 2ex;
+    background-image: linear-gradient(hsl(214 8% 10%) 0%, hsl(200 7% 11%));
+    border-bottom: 1px solid hsla(0, 0%, 100%, 0.14);
+    z-index: -1;
+}
+
+.buttons .col .button::after{
+    content: '';
+    display: block;
+    position: absolute;
+    inset: 0;
+    border-radius: 1ex;
+    background-color: hsla(0, 0%, 100%, 0.018);
+    clip-path: polygon(0 0, 66% 0, 45% 100%, 0 100%);
+}
+
+
+.ver{
+    height: 100%;
+    padding-right: 2.5rem;
+    overflow-y: auto;
+}
+
+.ver .not_found{
+    font-size: 2.1rem;
+    color: hsla(0, 0%, 100%, 0.438);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.ver header{
+    padding-top: 1.5rem;
+    padding-bottom: 1rem;
+}
+
+.ver .row{
+    color: #f2f2f2;
+    text-shadow: 0 0 1rem hsla(0, 0%, 95%, 0.199);
+    padding-bottom: 1rem;
+}
+
+.ver header,
+.ver .row{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    align-content: center;
+    text-align: center;
+    text-overflow: ellipsis;
+}
+
+#edit,
+#remove{
+    width: 5rem;
+    height: 1rem;
+    outline: none;
+    border: none;
+    justify-self: center;
+    cursor: pointer;
+}
+
+.select_container{
+    position: absolute;
+    top: 1.8rem;
+    right: 1.8rem;
+}
+
+.select_container form{
+    display: flex;
+    gap: 1.4rem;
+}
+
+
+.remove{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+}
+
+.remove button{
+    font-size: .9rem;
+    width: 6rem;
+    aspect-ratio: 1.85/1;
+    padding: 1rem 1.5rem;
+    border: none;
+    outline: none;
+    border-radius: 5ex;
+    background-color: hsl(345, 81%, 50%);
+    box-shadow: 0 0 1rem .03rem hsl(345, 81%, 50%);
+    color: #f2f2f2;
+    text-shadow: 0 0 1rem hsla(0, 0%, 95%, 0.199);
+    cursor: pointer;
+}
+
+.remove select{
+    font-size: 1.1rem;
+}
+
+
+.index span,
+.edition span,
+.removing span,
+.view span{
+    color: hsl(39, 78%, 53%);
+    text-shadow: 0 0 1.5rem hsla(39, 78%, 53%, 0.219);
+}
+
+.buttons .col .index,
+.buttons .col .edition,
+.buttons .col .removing,
+.buttons .col .view{
+    box-shadow: inset 0 0 0.15rem 0.12rem hsl(0deg 0% 100% / 10%), 
+    0 .1rem .15rem hsla(39, 78%, 53%, 0.192);
+}
